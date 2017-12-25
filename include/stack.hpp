@@ -28,8 +28,6 @@ private:
 template<typename T>
 stack<T>::stack() noexcept
 {
-	count_ = 0;
-	array_size_ = 0;
 	array_ = nullptr;
 }
 
