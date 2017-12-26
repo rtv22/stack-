@@ -12,6 +12,7 @@ public:
 	stack(const stack<T> &);
 	auto pop() -> std::shared_ptr<T>;
 	void swap(stack<T>&);
+	bool empty() const;
 private:
 	T * array_;
 	mutable std::mutex mutex_;
@@ -22,6 +23,12 @@ private:
 template <typename T> 
 stack<T>::stack() : count_(0), array_size_(0), array_{ nullptr }
 {}
+
+template <typename T>
+bool stack<T>::empty() const 
+{
+	return (count_ == 0);
+}
 
 template <typename T> 
 stack<T>::stack(const stack<T>& copy)
