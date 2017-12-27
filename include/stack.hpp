@@ -19,7 +19,6 @@ public:
 	stack(const stack<T> &);
 	auto pop() -> std::shared_ptr<T>;
 	void swap(stack<T>&);
-	bool empty() const;
 };
 
 template <typename T> 
