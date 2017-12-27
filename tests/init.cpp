@@ -58,7 +58,7 @@ SCENARIO("pop")
 	REQUIRE(val == 3);
 	val = *st.pop();
 	REQUIRE(st.count() == 1);
-	REQUIRE(val == 1);
+	REQUIRE(val == 2);
 	val = *st.pop();
 	REQUIRE(st.count() == 0);
 	REQUIRE(val == 1);
